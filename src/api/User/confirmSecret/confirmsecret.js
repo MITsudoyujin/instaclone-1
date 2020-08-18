@@ -6,9 +6,9 @@ export default {
     confirmSecret: async (_, args) => {
       const { email, secret } = args;
       const user = await prisma.user({ email });
+      console.log("right until here");
       if (user.loginSecret === secret) {
-        return "TOKEN";
-        return (token = generateToken(user.id));
+        return generateToken(user.id);
       } else {
         throw Error("Wrong email/secret combinaton");
       }
