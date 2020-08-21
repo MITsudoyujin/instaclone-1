@@ -8,8 +8,8 @@ type User {
   isFollowing: Boolean!
   isSelf: Boolean!
   bio: String
-  followers: [User!]!
-  followings: [User!]!
+  follower: [User!]!
+  following: [User!]!
   posts: [Post!]!
   likes: [Like!]!
   loginSecret: String
